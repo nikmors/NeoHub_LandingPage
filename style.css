@@ -1,0 +1,159 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background: rgb(36, 35, 35); 
+}
+
+body{
+    font-family: 'Poppins', sans-serif; 
+    background: #242739; 
+    color: #D6D7DE; 
+
+    animation: drop 1.5s ease;
+}
+
+header{
+    display: flex; 
+    background: #242739;
+    width: 80%;
+    height: 20vh;
+    margin: auto;
+    align-items: center;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    background: none;
+}
+
+.logo-container{
+    flex: 1;
+    background: #242739; 
+}
+.exit{
+    margin: auto;
+    background: #242739; 
+}
+
+main, img, a, .intro-text{
+    background: #242739; 
+}
+
+.presentation{
+    display: flex;
+    width: 70%;
+    margin: auto;
+    min-height: 80vh;
+    background: #242739; 
+}
+
+.introduction{
+    /*background: lightskyblue;*/
+    flex: 1;
+    background: #242739; 
+}
+
+.intro-text h1{
+    font-size: 77px;
+    font-family: 'Roboto', sans-serif;
+    background: #242739; 
+}
+
+.intro-text p{
+    font-size: 25px;
+    margin-top: 30px;
+    background: #242739; 
+}
+
+.cta{
+    padding: 50px 0px 0px 0px;
+    background: #242739; 
+}
+
+.cta-purchase{
+    font-size: 35px;
+    color: white;
+    border-radius: 45px;
+    border: none;
+    background-color: #2746FF;
+    padding: 20px 20px 20px 20px;
+    width: 250px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif; 
+    margin: 30px 0px 0px 250px;
+
+    animation: pulse 2s ease;
+}
+
+.cta-purchase:hover{
+    background-color: #677DFF;
+}
+
+.cta-contact{
+    font-size: 25px;
+    color: #D6D7DE;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    margin: 30px 0px 0px 30px;
+}
+
+/*////////////////////////////////////////////// ANIMATION SECTION //////////////////////////////////////////////////////////////////////////////////*/
+/*drop down landing page */
+@keyframes drop{
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+        
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+/* Purchase button animation*/
+@keyframes pulse{
+    0%{
+        transform: scale(0.2);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+} 
+
+/*////////////////////////////////////////////// MEDIA SCREEN //////////////////////////////////////////////////////////////////////////////////*/
+
+@media screen and (max-width: 1024px){
+    .presentation{
+        flex-direction: column;
+    }
+
+    .introduction{
+        margin-top: 5vh;
+        text-align: center;
+    }
+
+    .intro-text h1{
+        font-size: 50px;
+    }
+
+    .intro-text p{
+        font-size: 20px;
+    }
+
+    .cta-purchase{
+        margin: auto;
+    }
+
+    .cta-contact{
+        padding: 30px 0px 100px 0px;
+        margin: auto;
+        font-size: 20px;
+    }
+}
